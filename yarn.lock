@@ -10580,6 +10580,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cosmiconfig@npm:^8.1.3":
+  version: 8.1.3
+  resolution: "cosmiconfig@npm:8.1.3"
+  dependencies:
+    import-fresh: ^3.2.1
+    js-yaml: ^4.1.0
+    parse-json: ^5.0.0
+    path-type: ^4.0.0
+  checksum: 80144be230b89857e7c4cafd59ba8feb3f5f7e6dae90faa324629fdecf9a6fc3f5b4106c3623f69a1a3d77cb11ef90e5ab65a67f21d73ffda3d76b18f8e4e6c2
+  languageName: node
+  linkType: hard
+
 "cp-file@npm:^7.0.0":
   version: 7.0.0
   resolution: "cp-file@npm:7.0.0"
@@ -16423,7 +16435,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jiti@npm:^1.17.1":
+"jiti@npm:^1.17.1, jiti@npm:^1.18.2":
   version: 1.18.2
   resolution: "jiti@npm:1.18.2"
   bin:
@@ -16785,10 +16797,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"klona@npm:^2.0.4, klona@npm:^2.0.5":
-  version: 2.0.5
-  resolution: "klona@npm:2.0.5"
-  checksum: 5b752c11ca8e2996612386699f52cc5aed802aa4116663d26239ac0b054fae25191dacb95587ecf1a167b039daa9fc3fa2da17dfd5d0821f3037de3821d9a9e5
+"klona@npm:^2.0.4, klona@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "klona@npm:2.0.6"
+  checksum: 94eed2c6c2ce99f409df9186a96340558897b3e62a85afdc1ee39103954d2ebe1c1c4e9fe2b0952771771fa96d70055ede8b27962a7021406374fdb695fd4d01
   languageName: node
   linkType: hard
 
@@ -19623,17 +19635,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-loader@npm:7.0.0":
-  version: 7.0.0
-  resolution: "postcss-loader@npm:7.0.0"
+"postcss-loader@npm:7.3.0":
+  version: 7.3.0
+  resolution: "postcss-loader@npm:7.3.0"
   dependencies:
-    cosmiconfig: ^7.0.0
-    klona: ^2.0.5
-    semver: ^7.3.7
+    cosmiconfig: ^8.1.3
+    jiti: ^1.18.2
+    klona: ^2.0.6
+    semver: ^7.3.8
   peerDependencies:
     postcss: ^7.0.0 || ^8.0.1
     webpack: ^5.0.0
-  checksum: d3cba8c1e9c273b57b72e5ec9ee8ef8786f0682b7a952d1bce5383b9c17c6d5085d7e82da8a6b02bd2548cf1f5219f6823e116e438c529782a2738ba95ae793c
+  checksum: 81e9538aae14bedf1e8fa9700681f40bca71184f4d07c8c58ffd274cf3e15351234c1d0e7baa88b6e5d0cd5bea4abf9a6ae3271dba06ae575624cb387db4e833
   languageName: node
   linkType: hard
 
@@ -24462,7 +24475,7 @@ __metadata:
     "@tailwindcss/typography": 0.5.2
     autoprefixer: 10.4.7
     postcss: 8.4.14
-    postcss-loader: 7.0.0
+    postcss-loader: 7.3.0
     prop-types: 15.8.1
     react: 18.2.0
     react-dom: 18.2.0
