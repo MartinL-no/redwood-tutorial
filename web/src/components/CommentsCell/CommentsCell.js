@@ -1,10 +1,11 @@
-import Comment from 'SRC/components/Comment'
+import Comment from 'src/components/Comment'
 export const QUERY = gql`
   query CommentsQuery {
     comments {
       id
       name
-      bodycreatedAt
+      body
+      createdAt
     }
   }
 `
@@ -19,10 +20,10 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ comments }) => {
   return (
-    <ul>
-      {comments.map((comment) => {
-        return <Comment key={comment.id} comment={comment} />
-      })}
-    </ul>
+    <div className="space-y-8">
+      {comments.map((comment) => (
+        <Comment key={comment.id} comment={comment} />
+      ))}
+    </div>
   )
 }
