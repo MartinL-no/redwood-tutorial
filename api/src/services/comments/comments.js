@@ -23,7 +23,6 @@ export const deleteComment = ({ id }) => {
 }
 
 export const Comment = {
-  post: (_obj, { root }) => {
-    return db.comment.findUnique({ where: { id: root?.id } }).post()
-  },
+  post: (_obj, { root }) =>
+    db.comment.findUnique({ where: { id: root?.id } }).post(),
 }
