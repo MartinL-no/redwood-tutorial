@@ -1,3 +1,5 @@
+import { db } from 'src/lib/db'
+
 import { comments, createComment } from './comments'
 
 // Generated boilerplate tests do not account for all circumstances
@@ -6,11 +8,15 @@ import { comments, createComment } from './comments'
 //       https://redwoodjs.com/docs/testing#testing-services
 // https://redwoodjs.com/docs/testing#jest-expect-type-considerations
 
-describe('comments', () => {
+describe('returns all comments for a single post from the database', () => {
   scenario('returns all comments', async (scenario) => {
-    const result = await comments()
+    const result = await comments({ postId: scenario.comment.jane.postId })
 
-    expect(result.length).toEqual(Object.keys(scenario.comment).length)
+    const post = await db.post.findUnique({
+      where: { id: scenario.comment.jane.postId },
+      include: { comments: true },
+    })
+    expect(result.length).toEqual(post.comments.length)
   })
 
   scenario('postOnly', 'creates a new comment', async (scenario) => {
