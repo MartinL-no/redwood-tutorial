@@ -5,7 +5,7 @@ export const posts = () => {
 }
 
 export const post = ({ id }) => {
-  return db.post.findFirst({
+  return db.post.findUnique({
     where: { id },
   })
 }
